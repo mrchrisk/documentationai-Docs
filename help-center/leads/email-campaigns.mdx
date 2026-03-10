@@ -1,0 +1,111 @@
+---
+title: Email Campaigns
+description: Send targeted email campaigns to your leads using templates, variables, and the queue-based sending system.
+---
+
+# Email Campaigns
+
+Email campaigns let you send targeted messages to your leads with market data, report links, and personalised content. Campaigns are sent in the background so you can keep working while emails go out.
+
+## Creating a campaign
+
+There are two ways to send a campaign:
+
+### From the Leads page
+
+1. Go to **Leads** in the sidebar
+2. Select the leads you want to email (use checkboxes or filters)
+3. Click **Send Campaign**
+4. Choose a template or write a custom email
+5. Set the subject line
+6. Preview the email
+7. Click **Send**
+
+### From the AI Assistant
+
+Ask the assistant to draft and send an email campaign. See [Creating Content](/help-center/ai-assistant/creating-content) for details.
+
+## Email templates
+
+Templates save time when you send similar emails regularly. Each template includes:
+
+- **Subject line** - with optional variable placeholders
+- **Email body** - HTML content with variables
+- **Variable placeholders** - automatically filled with lead and report data
+
+### Template editor
+
+The template editor lets you write and preview your email. You can:
+
+- Format text with a rich editor
+- Insert variables from a picker
+- Preview how variables will render
+- Save templates for reuse
+
+### Available variables
+
+| Variable | What it inserts | Example |
+|---|---|---|
+| `{{lead_name}}` | Lead's first name | "Sarah" |
+| `{{location}}` | Property or report location | "Brentwood" |
+| `{{workspace_name}}` | Your company name | "Smith & Co" |
+| `{{report_title}}` | Title of the linked report | "Brentwood Property Market Report" |
+| `{{report_link}}` | Clickable link to the report | A styled hyperlink |
+| `{{current_date}}` | Current month name | "March" |
+| `{{averagePrice}}` | Average price with currency | "£456,789" |
+| `{{priceChange}}` | Price trend with sign | "+5%" |
+| `{{marketTrend}}` | Trend direction | "Rising" |
+| `{{demandRating}}` | Demand level | "High" |
+| `{{daysOnMarket}}` | Average days on market | "45" |
+| `{{salesVolume}}` | Sales per month | "120pm" |
+| `{{unsubscribe_link}}` | Unsubscribe link (required) | A styled hyperlink |
+
+> **Important:** Every campaign email must include `{{unsubscribe_link}}` for legal compliance.
+
+## How sending works
+
+When you send a campaign, it does not send all emails at once. Instead:
+
+1. The campaign is **queued** instantly (you see confirmation within a second)
+2. A background job **processes the queue** every 5 minutes
+3. Emails are sent in **batches** to respect provider rate limits
+4. You receive a **notification** when the campaign is complete
+
+This queue system means:
+
+- Sending a campaign never blocks you from using the app
+- Large campaigns (hundreds of leads) are handled smoothly
+- Rate limits are respected automatically
+- Failed emails are retried with exponential backoff
+
+## Email providers
+
+Market Trak uses two email providers:
+
+- **Mailgun** - for campaign emails sent from custom domains (up to 1,000 emails per batch)
+- **Resend** - for system emails like signup confirmations and password resets
+
+If you have a custom email domain configured, your campaigns will be sent via Mailgun with your domain. Otherwise, they are sent from the default Market Trak domain.
+
+## Campaign tracking
+
+After sending, you can see the campaign status:
+
+| Status | Meaning |
+|---|---|
+| **Queued** | Campaign is waiting to be processed |
+| **Processing** | Emails are being sent |
+| **Completed** | All emails sent successfully |
+| **Partially Failed** | Some emails failed (e.g. bounced addresses) |
+
+## Email limits
+
+Your plan includes a monthly email sending limit. Check your current usage in the profile menu or on the Workspace Settings page.
+
+## Tips
+
+- Personalise with `{{lead_name}}` to boost open rates
+- Link to a specific report with `{{report_link}}` so leads can explore the data
+- Keep subject lines under 60 characters
+- Include market data variables (prices, trends) to make emails feel current and relevant
+- Send campaigns during business hours for best engagement

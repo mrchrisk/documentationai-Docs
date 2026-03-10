@@ -1,0 +1,56 @@
+---
+title: Welcome Emails
+description: Automatically send a welcome email to new leads when they are captured.
+---
+
+# Welcome Emails
+
+Welcome emails are sent automatically when a new lead is captured in your workspace. They make a great first impression and let leads know who you are and what to expect.
+
+## How it works
+
+When a lead enters your workspace (from a report lead gate, valuation form, or manual entry), Market Trak can automatically send them a welcome email. This happens:
+
+1. **On lead creation** - for manually added leads or CSV imports (if the welcome email toggle is on)
+2. **After email verification** - for leads that go through the email confirmation flow
+
+The welcome email is sent as a one-off message, not as part of a campaign.
+
+## Enabling or disabling
+
+You can toggle welcome emails on or off in **Workspace Settings** under the **Email** section.
+
+- **On** - every new lead receives a welcome email automatically
+- **Off** - no automatic emails are sent (you can still send campaigns manually)
+
+## The welcome email template
+
+Your workspace has a system-provided welcome email template. This template:
+
+- Is pre-written with sensible defaults
+- Uses basic personalisation variables
+- Includes a required unsubscribe link for compliance
+
+### Available variables
+
+The welcome email supports a limited set of safe variables:
+
+| Variable | What it inserts |
+|---|---|
+| `{{lead_name}}` | Lead's first name |
+| `{{location}}` | The location associated with the lead |
+| `{{workspace_name}}` | Your company name |
+| `{{unsubscribe_link}}` | Unsubscribe link (required) |
+
+> **Note:** Report-specific variables (like `{{report_link}}` or `{{averagePrice}}`) are not available in welcome emails because the email is sent before a report context exists.
+
+## Email delivery
+
+Welcome emails are sent via **Mailgun** using your workspace's configured email domain. If you have a custom email domain set up, the welcome email comes from your domain. Otherwise, it uses the default Market Trak sending domain.
+
+## Tips
+
+- Keep your welcome email short and friendly
+- Introduce your agency and what the lead can expect to receive
+- Include your contact details so they know how to reach you
+- The welcome email sets the tone for your relationship with the lead, make it count

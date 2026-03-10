@@ -15,96 +15,99 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
-        "icon": "book",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
-              {
-                "title": "Introduction",
-                "path": "introduction",
-                "icon": "home"
-              },
-              {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
-              }
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "icon": "layers",
-            "pages": [
-              {
-                "title": "Features",
-                "path": "features",
-                "icon": "star"
-              },
-              {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "plug"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints"
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
+        "tab": "Help Centre",
         "icon": "help-circle",
         "pages": [
           {
-            "title": "Help Center",
+            "title": "Help Centre",
             "path": "help-center",
             "icon": "home"
           },
           {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
+            "group": "Getting Started",
+            "icon": "rocket",
             "pages": [
-              {
-                "title": "Account Access",
-                "path": "help-center/faq/account-access"
-              }
+              { "title": "Signing Up", "path": "help-center/getting-started/signing-up" },
+              { "title": "Workspace Setup", "path": "help-center/getting-started/workspace-setup" },
+              { "title": "Navigating the App", "path": "help-center/getting-started/navigating-the-app" }
             ]
           },
           {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
+            "group": "Dashboard",
+            "icon": "gauge",
             "pages": [
-              {
-                "title": "Login Issues",
-                "path": "help-center/troubleshooting/login-issues"
-              }
+              { "title": "Overview", "path": "help-center/dashboard" }
             ]
           },
           {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
+            "group": "Reports",
+            "icon": "bar-chart-3",
             "pages": [
-              {
-                "title": "Create Market Report",
-                "path": "help-center/guides/create-market-report"
-              },
-              {
-                "title": "Install the PWA and enable notifications",
-                "path": "help-center/guides/install-pwa-and-notifications"
-              }
+              { "title": "Generating a Report", "path": "help-center/reports/generating-a-report" },
+              { "title": "Editing and Sharing", "path": "help-center/reports/editing-and-sharing" },
+              { "title": "Engagement Tracking", "path": "help-center/reports/engagement-tracking" }
+            ]
+          },
+          {
+            "group": "Social Media",
+            "icon": "share-2",
+            "pages": [
+              { "title": "Creating Posts", "path": "help-center/social-media/creating-posts" },
+              { "title": "Scheduling and Publishing", "path": "help-center/social-media/scheduling-and-publishing" },
+              { "title": "Property Feed", "path": "help-center/social-media/property-feed" },
+              { "title": "Approval Queue", "path": "help-center/social-media/approval-queue" }
+            ]
+          },
+          {
+            "group": "AI Assistant",
+            "icon": "bot",
+            "pages": [
+              { "title": "Overview", "path": "help-center/ai-assistant/overview" },
+              { "title": "Creating Content", "path": "help-center/ai-assistant/creating-content" },
+              { "title": "Slash Commands", "path": "help-center/ai-assistant/slash-commands" },
+              { "title": "Memory and Instructions", "path": "help-center/ai-assistant/memory-and-instructions" }
+            ]
+          },
+          {
+            "group": "Leads",
+            "icon": "users",
+            "pages": [
+              { "title": "Managing Leads", "path": "help-center/leads/managing-leads" },
+              { "title": "Email Campaigns", "path": "help-center/leads/email-campaigns" },
+              { "title": "Importing Leads", "path": "help-center/leads/importing-leads" },
+              { "title": "Welcome Emails", "path": "help-center/leads/welcome-emails" }
+            ]
+          },
+          {
+            "group": "Valuations",
+            "icon": "home",
+            "pages": [
+              { "title": "Instant Valuations", "path": "help-center/valuations/instant-valuations" }
+            ]
+          },
+          {
+            "group": "Integrations",
+            "icon": "plug",
+            "pages": [
+              { "title": "Facebook", "path": "help-center/integrations/facebook" },
+              { "title": "CRM (Loop & Street)", "path": "help-center/integrations/crm" },
+              { "title": "Custom Email Domains", "path": "help-center/integrations/email-domains" }
+            ]
+          },
+          {
+            "group": "Settings",
+            "icon": "settings",
+            "pages": [
+              { "title": "User Settings", "path": "help-center/settings/user-settings" },
+              { "title": "Workspace Settings", "path": "help-center/settings/workspace-settings" },
+              { "title": "Billing", "path": "help-center/settings/billing" }
+            ]
+          },
+          {
+            "group": "Credits",
+            "icon": "zap",
+            "pages": [
+              { "title": "How Credits Work", "path": "help-center/credits/how-credits-work" }
             ]
           }
         ]
@@ -117,11 +120,6 @@
             "title": "Release History",
             "path": "changelog",
             "icon": "history"
-          },
-          {
-            "title": "Recent Updates",
-            "path": "recent-updates",
-            "icon": "git-commit-vertical"
           }
         ]
       }

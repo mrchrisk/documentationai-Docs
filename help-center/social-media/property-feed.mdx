@@ -1,0 +1,67 @@
+---
+title: Property Feed
+description: Automatically generate social media posts from new property listings in your CRM.
+---
+
+# Property Feed
+
+The Property Feed is one of Market Trak's most powerful features. It monitors your CRM for new property listings and automatically creates social media posts for each one, saving you hours of manual content creation.
+
+## How it works
+
+1. **Detection** - Market Trak checks your connected CRM (Loop or Street) every 2 hours for new listings
+2. **Generation** - For each new property found, an AI-generated social media post is created automatically (caption and image)
+3. **Review** - Posts land in your [Approval Queue](/help-center/social-media/approval-queue) for review
+4. **Publishing** - Approved posts are published to Facebook (or you can schedule them)
+
+Each auto-generated post costs **5 credits**.
+
+## Setting up the Property Feed
+
+### Prerequisites
+
+- A connected CRM integration (see [CRM Integration](/help-center/integrations/crm))
+- Facebook connected for direct publishing (optional, see [Facebook Integration](/help-center/integrations/facebook))
+
+### Configuration
+
+The Property Feed is configured per workspace. You can set:
+
+- **Listing filter** - choose whether to monitor Sales listings, Lettings listings, or Both
+- **Auto-approve per channel** - toggle whether posts for specific platforms skip the approval queue and publish automatically
+- **Feed sources** - the feed checks your CRM connection and can also monitor website sitemaps for new listing URLs
+
+### Sitemap feeds
+
+In addition to CRM monitoring, you can add your agency website's sitemap URL. Market Trak will detect new property listing pages and generate posts from them. When setting up a sitemap feed, you choose the listing type filter (Sales, Lettings, or Both).
+
+## What gets generated
+
+For each new listing, Market Trak creates:
+
+- A **caption** highlighting key property details (bedrooms, price, location, features)
+- An **AI-generated image** featuring the property
+- **Platform targeting** for Facebook and Instagram
+
+The content is based on the property data available from your CRM or website listing.
+
+## Managing feed posts
+
+All feed-generated posts appear in the [Approval Queue](/help-center/social-media/approval-queue). From there you can:
+
+- **Approve** - publish or schedule the post as-is
+- **Edit** - modify the caption or regenerate the image before approving
+- **Reject** - discard posts you do not want to publish
+
+## Feed timing
+
+- The feed dispatcher runs every **2 hours**
+- Each run processes up to **20 feeds** across all workspaces
+- New listings are detected based on their listed date
+- A stale feed cleanup job removes old, unprocessed items periodically
+
+## Tips
+
+- Review your approval queue regularly so posts go out while listings are fresh
+- Use auto-approve if you trust the AI output and want zero-touch posting
+- The Property Feed works best with active CRM data, make sure your CRM integration stays connected
