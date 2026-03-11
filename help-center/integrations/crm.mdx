@@ -1,22 +1,24 @@
 ---
 title: CRM Integration
-description: Connect your Loop or Street CRM to enable property feeds, CRM queries, and automated posting.
+description: 'Connect CRM to enable property feeds, CRM queries, and automated posting.'
 ---
-
 Market Trak integrates with **Loop CRM** and **Street CRM**, the two most popular CRM systems for UK estate agents. Connecting your CRM unlocks powerful features like automatic property feed posts, in-chat CRM queries, and property data access.
 
 ## Supported CRMs
 
-| CRM | Features |
-|---|---|
-| **Loop CRM** | Property search, buyer/seller data, automated property feed, AI assistant queries |
+| CRM            | Features                                                                          |
+| -------------- | --------------------------------------------------------------------------------- |
+| **Loop CRM**   | Property search, buyer/seller data, automated property feed, AI assistant queries |
 | **Street CRM** | Property search, buyer/seller data, automated property feed, AI assistant queries |
 
 ## Connecting your CRM
 
 1. Go to **Integrations** (navigate to `/integrations`)
+
 2. Find your CRM (Loop or Street)
+
 3. Enter your **API key** (provided by your CRM provider)
+
 4. Click **Connect**
 
 Your API key is encrypted with AES-GCM encryption and stored securely. It is never exposed in the frontend.
@@ -24,6 +26,7 @@ Your API key is encrypted with AES-GCM encryption and stored securely. It is nev
 ### Where to find your API key
 
 - **Loop CRM** - contact Loop support or check your Loop account settings for API access
+
 - **Street CRM** - available in your Street CRM admin panel under API settings
 
 ## What you can do with a connected CRM
@@ -37,8 +40,11 @@ The [Property Feed](/help-center/social-media/property-feed) monitors your CRM f
 With a CRM connected, the [AI Assistant](/help-center/ai-assistant/overview) can search your CRM data directly from chat:
 
 - "Show me properties for sale in Chelmsford"
+
 - "Find buyers with a budget over £500,000"
+
 - "What properties have sold recently in CM1?"
+
 - "Show me landlord contacts"
 
 The assistant also gets CRM-specific [slash commands](/help-center/ai-assistant/slash-commands) like `/forsale`, `/buyers`, `/sold`, and more.
@@ -54,7 +60,9 @@ When creating social media posts, you can pull property details from your CRM to
 The Integrations page shows:
 
 - Which CRM is connected
+
 - Whether the API key is valid
+
 - Connection health
 
 ### Updating your API key
@@ -62,8 +70,11 @@ The Integrations page shows:
 If your API key changes:
 
 1. Go to Integrations
+
 2. Click the edit button on your CRM connection
+
 3. Enter the new API key
+
 4. Save
 
 The new key is encrypted and stored immediately.
@@ -73,13 +84,17 @@ The new key is encrypted and stored immediately.
 To disconnect your CRM:
 
 1. Go to Integrations
+
 2. Click **Disconnect** on your CRM section
+
 3. Confirm
 
 After disconnecting:
 
 - The Property Feed will stop detecting new listings
+
 - CRM slash commands will disappear from the AI Assistant
+
 - Existing posts created from CRM data are unaffected
 
 ## One CRM at a time
@@ -89,5 +104,8 @@ Each workspace connects to one CRM. If you switch from Loop to Street (or vice v
 ## Tips
 
 - Keep your API key secure and do not share it
+
 - If CRM queries return unexpected results, check that your API key has the correct permissions
+
 - The Property Feed works best when your CRM data is up to date, make sure listings have accurate addresses and dates
+

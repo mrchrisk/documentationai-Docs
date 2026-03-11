@@ -96,28 +96,6 @@
             ]
           },
           {
-            "group": "AI Assistant",
-            "icon": "bot",
-            "pages": [
-              {
-                "title": "Overview",
-                "path": "help-center/ai-assistant/overview"
-              },
-              {
-                "title": "Creating Content",
-                "path": "help-center/ai-assistant/creating-content"
-              },
-              {
-                "title": "Slash Commands",
-                "path": "help-center/ai-assistant/slash-commands"
-              },
-              {
-                "title": "Memory and Instructions",
-                "path": "help-center/ai-assistant/memory-and-instructions"
-              }
-            ]
-          },
-          {
             "group": "Leads",
             "icon": "users",
             "pages": [
@@ -140,6 +118,28 @@
             ]
           },
           {
+            "group": "AI Assistant",
+            "icon": "bot",
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "help-center/ai-assistant/overview"
+              },
+              {
+                "title": "Creating Content",
+                "path": "help-center/ai-assistant/creating-content"
+              },
+              {
+                "title": "Slash Commands",
+                "path": "help-center/ai-assistant/slash-commands"
+              },
+              {
+                "title": "Memory and Instructions",
+                "path": "help-center/ai-assistant/memory-and-instructions"
+              }
+            ]
+          },
+          {
             "group": "Valuations",
             "icon": "home",
             "pages": [
@@ -158,7 +158,7 @@
                 "path": "help-center/integrations/facebook"
               },
               {
-                "title": "CRM (Loop & Street)",
+                "title": "CRM integrations",
                 "path": "help-center/integrations/crm"
               },
               {
