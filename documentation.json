@@ -29,7 +29,8 @@
             "pages": [
               { "title": "Signing Up", "path": "help-center/getting-started/signing-up" },
               { "title": "Workspace Setup", "path": "help-center/getting-started/workspace-setup" },
-              { "title": "Navigating the App", "path": "help-center/getting-started/navigating-the-app" }
+              { "title": "Navigating the App", "path": "help-center/getting-started/navigating-the-app" },
+              { "title": "Install the App", "path": "help-center/getting-started/install-the-app" }
             ]
           },
           {
