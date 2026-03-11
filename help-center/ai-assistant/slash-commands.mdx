@@ -3,57 +3,96 @@ title: Slash Commands
 description: Quick shortcuts for common actions in the AI Assistant.
 ---
 
-Slash commands are shortcuts you can type in the assistant chat to quickly trigger common actions. Type `/` in the message input to see the available commands.
+Slash commands are shortcuts you can type in the assistant chat to quickly trigger common actions. Type `/` in the message input to see the full menu, organised by category.
 
 ## How to use
 
 1. In the chat input, type `/`
-2. A menu appears with available commands
+2. A categorised menu appears with all available commands
 3. Click a command or keep typing to filter the list
-4. The command pre-fills your message or triggers an action
+4. The command sends a pre-built message to the assistant
 
-## Available commands
-
-### Content creation
+## Content creation
 
 | Command | What it does |
 |---|---|
-| `/post` | Start creating a social media post |
-| `/email` | Start drafting an email campaign |
-| `/letter` | Start writing a canvassing letter |
-| `/image` | Generate an AI image |
+| `/report` | Generate a new market report for a location |
+| `/post` | Create a social media post with AI |
+| `/email` | Draft and send an email campaign to your leads |
+| `/letter` | Generate a canvassing letter for a location |
 
-### Data and reports
+## Photo editing - Effects
+
+Upload a property photo first, then use these commands to transform it:
 
 | Command | What it does |
 |---|---|
-| `/report` | Look up or discuss a report |
-| `/data` | Fetch market data for a location |
+| `/sketch` | Transform a photo into an architectural concept sketch with annotations |
+| `/cinematic` | Apply a cinematic mood with warm editorial lighting and depth of field |
+| `/nighttime` | Convert to a night time scene with dark sky and warm interior lights |
+| `/twilight` | Convert to a twilight blue hour scene with a dusky sky |
+| `/goldenhour` | Apply warm golden hour sunlight with long soft shadows |
+| `/sunny` | Replace the sky with a bright, clear sunny day |
+| `/moody` | Create a dramatic overcast scene with muted tones |
+| `/bluesky` | Replace a grey sky with clear blue |
+| `/declutter` | Remove clutter and personal belongings from the photo |
+| `/removecars` | Remove parked cars from exterior shots |
 
-### CRM commands
+## Photo editing - Resize
+
+Extend a photo to a different aspect ratio using AI outpainting. The original image stays intact and new content is generated to fill the extra space.
+
+| Command | What it does |
+|---|---|
+| `/portrait` | Extend to 4:5 portrait (ideal for Instagram feed and property portals) |
+| `/landscape` | Extend to 16:9 landscape (ideal for YouTube thumbnails and banners) |
+| `/story` | Extend to 9:16 vertical (ideal for Stories, Reels, and TikTok) |
+| `/square` | Extend to 1:1 square (ideal for social media grids) |
+
+## Photo editing - Virtual staging
+
+Upload an empty room photo and use these commands to virtually furnish it in different interior design styles:
+
+| Command | Style |
+|---|---|
+| `/modern-minimalist` | Clean lines, light wood, soft natural lighting |
+| `/scandinavian` | Warm hygge mood, beige and white palette, functional |
+| `/luxury-modern` | Marble surfaces, metallic accents, premium feel |
+| `/industrial` | Exposed concrete, matte black metal, raw materials |
+| `/contemporary` | Beige-gray palette, modern, balanced clean look |
+| `/traditional` | Wood trims, warm tones, classic inviting feel |
+| `/japandi` | Natural materials, low-saturation wood, minimal harmony |
+| `/urban-chic` | Stylish apartment, gray palette, brass accents |
+
+## CRM commands
 
 These commands only appear if you have a CRM (Loop or Street) connected:
 
 | Command | What it does |
 |---|---|
-| `/forsale` | Search properties for sale |
-| `/sold` | Search sold properties |
+| `/forsale` | Search properties currently for sale |
+| `/sold` | Search recently sold properties |
 | `/lettings` | Search properties to let |
 | `/buyers` | Search recent buyers |
 | `/sellers` | Search recent sellers |
 | `/renters` | Search renter applicants |
 | `/landlords` | Search landlords |
 
-### Utility
+## Insights
 
 | Command | What it does |
 |---|---|
-| `/help` | Get help or ask a question |
-| `/clear` | Clear the current conversation |
+| `/improve` | Get personalised marketing improvement tips |
+| `/performance` | Review your campaign and post performance |
+| `/leads` | See how many leads you have this week |
+| `/valuation` | Get an instant property valuation estimate |
+| `/advice` | Get a suggested next action based on your activity |
 
 ## Tips
 
 - You do not have to use slash commands. You can always type naturally and the assistant will understand
 - Slash commands are just a faster way to start common tasks
+- Photo editing commands require an uploaded image in the conversation. Upload a photo first, then type the command
+- Virtual staging works best on empty or sparsely furnished rooms
 - CRM commands are context-aware and will search your connected CRM automatically
 - If a command does not appear, it may require a feature your plan does not include (e.g. CRM integration)

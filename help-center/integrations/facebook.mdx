@@ -1,35 +1,46 @@
 ---
-title: Facebook Integration
-description: Connect your Facebook page to publish social media posts directly from Market Trak.
+title: Facebook & Instagram Integration
+description: Connect your Facebook page and Instagram account to publish social media posts directly from Market Trak.
 ---
 
-Connect your Facebook business page to Market Trak to publish social media posts directly from the app. No more downloading images and copy-pasting captions.
+Connect your Facebook business page and Instagram professional account to Market Trak to publish social media posts directly from the app. No more downloading images and copy-pasting captions.
 
-## Connecting Facebook
+## Connecting Facebook & Instagram
 
 1. Go to **Integrations** (navigate to `/integrations` or find it in your workspace settings)
-2. Find the **Facebook** section
+2. Find the **Facebook & Instagram** section
 3. Click **Connect Facebook**
 4. You will be redirected to Facebook to authorise Market Trak
 5. Select the Facebook Page you want to publish to
-6. Grant the required permissions
-7. You will be redirected back to Market Trak with your page connected
+6. If your Facebook Page is linked to an Instagram professional account, Instagram will be connected automatically
+7. Grant the required permissions
+8. You will be redirected back to Market Trak with your page connected
 
 ### Required permissions
 
 Market Trak needs the following Facebook permissions to publish on your behalf:
 
-- **pages_manage_posts** - to create posts on your page
+- **pages_manage_posts** - to create posts on your Facebook page
 - **pages_read_engagement** - to verify the connection
+- **instagram_basic** and **instagram_content_publish** - to publish to your Instagram account (if linked)
 
-These permissions only allow Market Trak to post to your selected page. It cannot access your personal Facebook profile, messages, or other pages.
+These permissions only allow Market Trak to post to your selected page and linked Instagram account. It cannot access your personal Facebook profile, messages, or other pages.
+
+### Instagram requirements
+
+To publish to Instagram, your Instagram account must be:
+
+- A **Professional account** (Business or Creator), not a personal account
+- **Linked to a Facebook Page** via Meta Business Suite
+
+If your Instagram account is not linked, only Facebook publishing will be available. You can link your accounts in [Meta Business Suite](https://business.facebook.com/settings).
 
 ## Publishing posts
 
-Once connected, you can publish to Facebook from:
+Once connected, you can publish to Facebook and Instagram from:
 
-- **Post Creator** - click "Publish Now" when creating a post
-- **Scheduled posts** - posts publish automatically at the scheduled time
+- **Post Creator** - click "Publish Now" when creating a post and select your target platforms
+- **Scheduled posts** - posts publish automatically at the scheduled time to your chosen platforms
 - **Approval Queue** - approve a feed-generated post to publish it
 - **AI Assistant** - the assistant can publish posts as part of the content creation flow
 
@@ -40,6 +51,7 @@ Once connected, you can publish to Facebook from:
 In the Integrations page, you can see:
 
 - Which Facebook page is connected
+- Whether an Instagram account is linked
 - Whether the connection is active
 - When the token was last refreshed
 
@@ -48,20 +60,20 @@ In the Integrations page, you can see:
 Facebook tokens expire periodically. If your connection stops working:
 
 1. Go to Integrations
-2. Click **Reconnect** on the Facebook section
+2. Click **Reconnect** on the Facebook & Instagram section
 3. Re-authorise through Facebook
 
 You will receive a notification if your token expires and posts fail to publish.
 
 ### Disconnecting
 
-To disconnect Facebook:
+To disconnect:
 
 1. Go to Integrations
-2. Click **Disconnect** on the Facebook section
+2. Click **Disconnect** on the Facebook & Instagram section
 3. Confirm the disconnection
 
-After disconnecting, posts will no longer publish to Facebook. You can still create posts and download them for manual posting.
+After disconnecting, posts will no longer publish to Facebook or Instagram. You can still create posts and download them for manual posting.
 
 ## GDPR compliance
 
@@ -71,4 +83,5 @@ Market Trak handles Facebook GDPR data deletion requests automatically. If Faceb
 
 - Keep your Facebook connection active to take full advantage of scheduled posts and the Property Feed
 - If posts fail to publish, check your connection status first
-- You can publish to one Facebook page per workspace
+- You can publish to one Facebook page (and its linked Instagram account) per workspace
+- Link your Instagram professional account to your Facebook Page in Meta Business Suite to unlock Instagram publishing
