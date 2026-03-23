@@ -11,17 +11,34 @@ As you chat with the assistant, it automatically picks up on important details a
 
 - The areas you frequently create content about
 - Your preferred writing style or tone
+- Your favourite image styles and aspect ratios
 - Common property types you deal with
 - Client communication preferences
 
-This information is stored securely as vector embeddings (semantic memories) and used to make future responses more relevant and personalised.
+The assistant learns from patterns in your usage over time. For example, if you consistently choose "Abstract Growth" style images, it will start defaulting to that style. Preferences are confirmed after being observed at least three times, so a single choice does not lock anything in.
 
 ### How it works
 
-- Memories are extracted from your conversations automatically
+- Memories are extracted from your conversations automatically after you finish chatting
 - They are classified by topic (e.g. "market knowledge", "style preference", "area focus")
+- Usage patterns (image style, post style, aspect ratio) are tracked as tallies that build over time
 - When you start a new conversation, relevant memories are retrieved to provide context
 - You do not need to repeat yourself, the assistant remembers
+
+### Viewing your learned preferences
+
+Go to **User Settings** > **AI Assistant** to see what the assistant has learned about you. This includes:
+
+- Your preferred post writing style (e.g. "Usually writes Short & Punchy posts")
+- Your preferred image style (e.g. "Prefers Abstract Growth style images")
+- Your preferred aspect ratio (e.g. "Usually uses 4:5 aspect ratio")
+- Location preferences and other details picked up from conversations
+
+You can delete any learned preference from this screen if it is wrong or outdated.
+
+### Telling the assistant to remember something
+
+You can explicitly tell the assistant to remember a preference by saying things like "remember that I always want...", "from now on...", or "I prefer...". The assistant will confirm it has saved the preference immediately.
 
 ### Privacy
 
