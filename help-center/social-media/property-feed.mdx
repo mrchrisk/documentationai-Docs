@@ -1,15 +1,21 @@
 ---
 title: Property Feed
-description: Automatically generate social media posts from new property listings on your website or CRM.
+description: >-
+  Automatically generate social media posts from new property listings on your
+  website or CRM.
 ---
-
 The Property Feed is one of Market Trak's most powerful features. It monitors your agency website for new property listings and automatically creates social media posts for each one, saving you hours of manual content creation.
+
+<Image src="https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1774284231121-dm0drwrpl8i-Property-Feed.PNG?q=85&fm=auto&auto=compress%2Cformat" width="1640" height="1271" alt="" />
 
 ## How it works
 
 1. **Detection** - Market Trak checks your website (or CRM, if connected) every 2 hours for new listings
+
 2. **Generation** - For each new property found, an AI-generated social media post is created automatically (caption and image)
+
 3. **Review** - Posts land in your [Approval Queue](/help-center/social-media/approval-queue) for review
+
 4. **Publishing** - Approved posts are published to Facebook and Instagram (or you can schedule them)
 
 Each auto-generated post costs **5 credits**.
@@ -19,21 +25,29 @@ Each auto-generated post costs **5 credits**.
 ### Prerequisites
 
 - Your agency website URL (the feed scanner will detect your listings automatically)
+
 - Facebook and Instagram connected for direct publishing (optional, see [Facebook & Instagram Integration](/help-center/integrations/facebook))
 
 ### Adding a website feed
 
 1. Go to **Integrations** and find the **Property Feeds** section
+
 2. Click **Add Feed**
+
 3. Enter your agency website URL (e.g. `https://youragency.co.uk`)
+
 4. Market Trak will scan your site and auto-detect your property listings
+
 5. If detection succeeds, you will see how many properties were found
+
 6. Click **Add Feed** to start monitoring
 
 Market Trak supports three detection methods:
 
 - **Search page** - if you enter a specific search URL (e.g. `youragency.co.uk/properties/for-sale/`), it parses the listing links directly
+
 - **Sitemap** - checks your website's `sitemap.xml` for property URLs
+
 - **HTML scanning** - falls back to scanning common listing page structures
 
 If automatic detection does not find your listings, you can provide a search page URL or an example property URL to help the scanner identify the correct pattern.
@@ -43,6 +57,7 @@ If automatic detection does not find your listings, you can provide a search pag
 The Property Feed is configured per workspace. You can set:
 
 - **Listing filter** - choose whether to monitor Sales listings, Lettings listings, or Both
+
 - **Auto-approve per channel** - toggle whether posts for Facebook and/or Instagram skip the approval queue and publish automatically
 
 ### CRM feeds (beta)
@@ -54,7 +69,9 @@ If you have a CRM connected (Loop or Street), you can also enable a CRM feed. Th
 For each new listing, Market Trak creates:
 
 - A **caption** highlighting key property details (bedrooms, price, location, features)
+
 - An **AI-generated image** featuring the property
+
 - **Platform targeting** for Facebook and Instagram
 
 The content is based on the property data available from your website listing or CRM.
@@ -64,19 +81,28 @@ The content is based on the property data available from your website listing or
 All feed-generated posts appear in the [Approval Queue](/help-center/social-media/approval-queue). From there you can:
 
 - **Approve** - publish or schedule the post as-is
+
 - **Edit** - modify the caption or regenerate the image before approving
+
 - **Reject** - discard posts you do not want to publish
 
 ## Feed timing
 
 - The feed dispatcher runs every **2 hours**
+
 - Each run processes up to **20 feeds** across all workspaces
+
 - New listings are detected based on their listed date
+
 - A stale feed cleanup job removes old, unprocessed items periodically
 
 ## Tips
 
 - Review your approval queue regularly so posts go out while listings are fresh
+
 - Use auto-approve if you trust the AI output and want zero-touch posting
+
 - Make sure your agency website is accessible and has property listing pages for the best detection results
+
 - If you also have a CRM connected, you can run both a website feed and a CRM feed simultaneously for maximum coverage
+

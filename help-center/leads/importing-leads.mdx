@@ -2,16 +2,24 @@
 title: Importing Leads
 description: Bulk import leads from a CSV file with field mapping and duplicate detection.
 ---
+If you have existing leads in a spreadsheet, you can import them into Market Trak in bulk using the CSV import tool.\
+\
 
-If you have existing leads in a spreadsheet, you can import them into Market Trak in bulk using the CSV import tool.
+
+<Image src="https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1774284584646-tu0ciricnd-import-leads.png?q=85&fm=auto&auto=compress%2Cformat" width="1704" height="1270" alt="" />
 
 ## How to import
 
 1. Go to **Leads** in the sidebar
+
 2. Click **Import** (or the upload icon)
+
 3. Select your CSV file
+
 4. Map your CSV columns to Market Trak fields
+
 5. Review the import preview
+
 6. Click **Import**
 
 ## CSV format
@@ -19,8 +27,11 @@ If you have existing leads in a spreadsheet, you can import them into Market Tra
 Your CSV file should include at minimum:
 
 - **Email address** (required, used for deduplication)
+
 - **Name** (recommended)
+
 - **Location** (optional)
+
 - **Phone** (optional)
 
 The first row should be column headers. Example:
@@ -36,8 +47,11 @@ James Wilson,james@example.com,Chelmsford,07700900001
 After uploading, you will see a mapping screen where you match your CSV columns to Market Trak fields:
 
 - **Name** - maps to the lead's full name
+
 - **Email** - maps to the lead's email address
+
 - **Location** - maps to the lead's location/area
+
 - **Phone** - maps to the lead's phone number
 
 If your column headers match the expected names, mapping happens automatically. Otherwise, use the dropdowns to assign each column.
@@ -47,7 +61,9 @@ If your column headers match the expected names, mapping happens automatically. 
 Market Trak checks for existing leads by email address. If a lead with the same email already exists in your workspace:
 
 - The duplicate is flagged during the preview step
+
 - You can choose to skip duplicates or update existing records
+
 - No duplicate leads are created
 
 ## Welcome email toggle
@@ -61,7 +77,9 @@ During import, you can choose whether to send an automatic welcome email to each
 The import respects your plan's contact limit. If importing would exceed your limit:
 
 - You are warned before the import starts
+
 - You can choose to import up to your limit
+
 - Or upgrade your plan to increase capacity
 
 ## After importing
@@ -69,11 +87,16 @@ The import respects your plan's contact limit. If importing would exceed your li
 Imported leads appear in your lead dashboard immediately. You can:
 
 - Filter by source to see just your imported leads
+
 - Send them an email campaign
+
 - View their details and engagement
 
 ## Tips
 
 - Clean your CSV before importing, remove blank rows, fix formatting issues, and validate email addresses
+
 - Use consistent location names (e.g. always "Brentwood" not sometimes "Brentwood, Essex")
+
 - Start with a small test import to verify your field mapping before uploading a large file
+
