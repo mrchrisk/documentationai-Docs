@@ -1,0 +1,148 @@
+---
+title: Changelog
+description: Version history of BosOn with details on recent updates, improvements, and breaking changes.
+---
+
+## Recent Updates
+
+Stay informed about the latest BosOn releases. You can find detailed release notes for each version below, including new features, improvements, bug fixes, and any breaking changes.
+
+<Update label="2024-12-15" description="v1.2.0" tags={["feature", "improvement", "bugfix"]}>
+
+## New Features
+
+- Added support for new AI models in Studio, including Gemini 2.0 and custom fine-tuned options.
+- Introduced Boards filtering by status (Pending, Approved, Live, Paused, Rejected, Retired).
+- New integrations with Google Drive and ChatGPT for direct exports from Library.
+
+## Improvements
+
+- Enhanced search in Library to find items by aspect ratio (e.g., `16:9`) or keywords like "aura-hero".
+- Optimized performance for large collections, reducing load times by 40% for 1,000+ items.
+- Updated UI in Studio with drag-and-drop for Elements reorganization.
+
+## Bug Fixes
+
+- Fixed download issues for high-resolution stills and videos.
+- Resolved sync errors when posting approved items to external platforms.
+- Corrected status updates not reflecting in real-time for shared Boards.
+
+</Update>
+
+<Update label="2024-11-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Launch of Elements tab with pre-built AI prompts for quick generation.
+- Added performance metrics to item cards (conversions, revenue estimates).
+- Support for batch approvals in Studio North view.
+
+## Improvements
+
+- Better organization in Library with "Recently Added" and "New" filters.
+- Improved mobile responsiveness for Showreel and Integrations pages.
+
+## Bug Fixes
+
+- Fixed aspect ratio locking issues during video generation.
+- Resolved authentication glitches for early access users.
+
+</Update>
+
+<Update label="2024-10-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## Initial Release
+
+- Core Library functionality for storing AI-generated pictures and videos.
+- Studio for creating content with your preferred AI tools.
+- Basic Boards and status tracking (Pending to Live).
+
+## Breaking Changes
+
+- Initial config format changed; see upgrade guide below.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade BosOn to the latest version safely.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+    Export your Library items and Boards.
+
+    ```bash
+    boson-cli export --library --boards --output=/path/to/backup
+    ```
+
+  </Step>
+  <Step title="Update Configuration" icon="settings">
+
+    Update your config file with the new format.
+
+    <CodeGroup tabs="JSON,YAML">
+      ```json
+      {
+        "apiUrl": "https://api.example.com",
+        "libraryPath": "/path/to/library",
+        "defaultModels": ["higgsfield", "custom"]
+      }
+      ```
+      ```yaml
+      apiUrl: https://api.example.com
+      libraryPath: /path/to/library
+      defaultModels:
+        - higgsfield
+        - custom
+      ```
+    </CodeGroup>
+
+  </Step>
+  <Step title="Run the Update" icon="download">
+
+    Install the latest version and migrate.
+
+    ```bash
+    npm install boson@latest
+    boson migrate --from=v1.1.0
+    ```
+
+  </Step>
+  <Step title="Verify" icon="check-circle">
+
+    Check your Library and Studio for any issues.
+
+  </Step>
+</Steps>
+
+## Known Issues and Fixes
+
+<Callout kind="alert">
+  Some users may experience sync delays with external integrations after v1.2.0. Restart the app or run `boson sync --force` to resolve. We plan to address this in v1.2.1.
+</Callout>
+
+<Expandable title="Upcoming in v1.3.0" default-open="false">
+  Planned features include advanced analytics for conversions and automated posting workflows. Track progress on our [GitHub repository](https://github.com/example/boson).
+</Expandable>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="book-open" href="/quickstart">
+    Get started with BosOn in minutes.
+  </Card>
+  <Card title="Library Guide" icon="library" href="/library">
+    Organize your AI content effectively.
+  </Card>
+  <Card title="Studio" icon="edit-3" href="/studio">
+    Create pictures and videos seamlessly.
+  </Card>
+  <Card title="Integrations" icon="plug" href="/integrations">
+    Connect BosOn to your tools.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  This changelog serves as a starter template. Customize it with your actual release notes.
+</Callout>

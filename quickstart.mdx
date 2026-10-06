@@ -1,0 +1,145 @@
+---
+title: Quickstart
+description: Step-by-step guide to download, install BosOn on Windows, and perform your first content import.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+
+Before starting, ensure you meet these requirements:
+
+- Windows 10 (version 1903 or later) or Windows 11
+- At least 4 GB RAM (8 GB recommended for AI content processing)
+- 2 GB free disk space
+- Internet connection for initial download and updates
+
+</Callout>
+
+## Download BosOn
+
+Visit the [official BosOn download page](https://getboson.app/download) to get the latest Windows installer.
+
+<Steps>
+  <Step title="Get the Installer" icon="download">
+    Click the **Download for Windows** button. This downloads `BosOn-Setup.exe` (approximately 150 MB).
+    
+    Save the file to your `Downloads` folder or a preferred location.
+  </Step>
+  
+  <Step title="Verify Download" icon="check-circle">
+    Check the file size matches the expected value listed on the site (around 150 MB).
+    
+    Optionally, verify the SHA-256 checksum:
+    
+````powershell
+Get-FileHash .\BosOn-Setup.exe -Algorithm SHA256
+````
+    
+    Compare with the hash provided on the download page.
+  </Step>
+</Steps>
+
+## Install BosOn
+
+Run the installer as an administrator for full access to folders.
+
+<Steps>
+  <Step title="Run Installer" icon="play-circle">
+    Double-click `BosOn-Setup.exe` or right-click and select **Run as administrator**.
+    
+    Follow the setup wizard:
+    
+    1. Accept the license agreement
+    2. Choose install location (default: `C:\Program Files\BosOn`)
+    3. Select components (Library, Studio, all recommended)
+    
+    Click **Install** and wait 2-3 minutes.
+  </Step>
+  
+  <Step title="Complete Setup" icon="settings">
+    Finish the wizard and launch BosOn when prompted.
+    
+    BosOn creates shortcuts on your desktop and Start menu.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  During installation, BosOn may prompt for Microsoft Edge WebView2 runtime. Install it if not present—it enables rich previews.
+</Callout>
+
+## Launch and First Import
+
+<Tabs>
+  <Tab title="Desktop App" icon="monitor">
+    <Steps>
+      <Step title="Open BosOn" icon="rocket">
+        Double-click the BosOn icon on your desktop or search **BosOn** in the Start menu.
+        
+        The app opens to the **Library** dashboard.
+      </Step>
+      
+      <Step title="Import Files" icon="upload">
+        Drag AI-generated images or videos from your folder into the **All Items** area.
+        
+        Or click **Import** > **Select Folder** and choose a directory (e.g., `C:\AI_Assets`).
+        
+        BosOn scans and catalogs items automatically.
+      </Step>
+    </Steps>
+  </Tab>
+  
+  <Tab title="Command Line (Advanced)" icon="terminal">
+    Launch via PowerShell for scripted imports:
+    
+````powershell
+# Start BosOn
+Start-Process "C:\Program Files\BosOn\BosOn.exe"
+
+# Import folder (after app is running, use Studio API if enabled)
+# Note: Full CLI support in v1.1.0+
+````
+  </Tab>
+</Tabs>
+
+Your first items appear with metadata like status (**Pending**) and preview thumbnails. Use filters for **New** or **Recently Added**.
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Explore Library" icon="book-open" href="/library">
+    Organize your AI content with boards, tags, and search.
+  </Card>
+  
+  <Card title="Studio Tools" icon="settings" href="/studio">
+    Generate new images and videos directly in BosOn.
+  </Card>
+  
+  <Card title="Integrations" icon="zap" href="/integrations">
+    Connect ChatGPT, Gemini, and download tools.
+  </Card>
+  
+  <Card title="Post Content" icon="share-2" href="/posting">
+    Schedule and publish to social platforms.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  
+### Installer Fails
+- Run as administrator
+- Disable antivirus temporarily
+- Download again if corrupted
+
+### Import Errors
+- Ensure files are JPG, PNG, MP4 (`<50MB` each)
+- Check folder permissions
+
+### App Crashes
+Update graphics drivers and restart.
+
+</Expandable>
+
+<Callout kind="success">
+  Congratulations! You've set up BosOn. Start creating with "Make it. Keep it. Find it. Post it."
+</Callout>

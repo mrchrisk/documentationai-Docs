@@ -1,0 +1,162 @@
+---
+title: Settings and Integrations
+description: Guide to configuring BosOn settings, preferences, and integrations for a personalized workflow.
+---
+
+## Overview
+
+Configure BosOn to match your workflow. Access settings from the sidebar menu or profile icon. Customize themes, connect import sources like Google Drive and ChatGPT, enable tag suggestions, and set up posting options.
+
+<Callout kind="tip">
+  Save changes immediately after updates. Restart the app for theme changes to take full effect.
+</Callout>
+
+## App Preferences and Themes
+
+Tailor the interface to your needs.
+
+<Tabs>
+  <Tab title="Light Theme" icon="sun">
+    Default bright mode for daytime use.
+    
+    ```json
+    {
+      "theme": "light",
+      "accentColor": "#e03283"
+    }
+    ```
+  </Tab>
+  
+  <Tab title="Dark Theme" icon="moon">
+    Low-light mode to reduce eye strain.
+    
+    ```json
+    {
+      "theme": "dark",
+      "accentColor": "#e03283"
+    }
+    ```
+  </Tab>
+  
+  <Tab title="Auto" icon="monitor">
+    Switches based on system preferences.
+    
+    ```json
+    {
+      "theme": "auto",
+      "detectSystem": true
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Import Sources
+
+Connect external services to pull in AI-generated content automatically.
+
+<Columns cols={2}>
+  <Card title="Google Drive" icon="cloud" href="https://getboson.app/integrations/drive">
+    Import images and videos directly from your Drive folders.
+  </Card>
+  
+  <Card title="ChatGPT" icon="message-circle" href="https://getboson.app/integrations/chatgpt">
+    Sync generations from conversations and exports.
+  </Card>
+</Columns>
+
+<Steps>
+  <Step title="Connect Google Drive" icon="link">
+    Click **Integrations** in settings.
+    
+    Select **Google Drive**.
+    
+````bash
+# Authorize via OAuth
+npx boson-cli auth drive
+````
+
+    Grant permissions for read access.
+  </Step>
+  
+  <Step title="Connect ChatGPT" icon="key">
+    Generate API key from OpenAI dashboard.
+    
+    Paste into BosOn settings.
+    
+````json
+{
+  "openai": {
+    "apiKey": "YOUR_OPENAI_API_KEY"
+  }
+}
+````
+  </Step>
+</Steps>
+
+<ParamField path="integrations.drive.folderId" param-type="string" required="false">
+  Specify a Drive folder ID for targeted imports.
+</ParamField>
+
+<ParamField header="Authorization" param-type="string" required="true">
+  Bearer token for ChatGPT API access.
+</ParamField>
+
+## Tag Suggestions and Search
+
+Enable smart tagging for quick organization.
+
+<Expandable title="Advanced Search Options" default-open="true">
+  Toggle options like fuzzy matching and auto-suggest.
+  
+  | Option              | Description                          | Default |
+  |---------------------|--------------------------------------|---------|
+  | Fuzzy Search        | Matches similar terms                | On     |
+  | Tag Auto-Complete   | Suggests based on past usage         | On     |
+  | Exclude Folders     | Skip certain import sources          | Off    |
+  
+  Update via config:
+  
+  ```json
+  {
+    "search": {
+      "fuzzy": true,
+      "autoSuggest": true
+    }
+  }
+  ```
+</Expandable>
+
+## Posting and Export Configurations
+
+Set defaults for sharing content to social platforms or exports.
+
+<CodeGroup tabs="JSON,CLI">
+  ```json
+  {
+    "export": {
+      "defaultFormat": "mp4",
+      "platforms": ["meta", "twitter"],
+      "quality": "high"
+    }
+  }
+  ```
+  ```bash
+  boson export --format=mp4 --platform=meta item-id
+  ```
+</CodeGroup>
+
+<Board title="Integration Status">
+  <BoardColumn title="Connected" color="2" icon="check-circle">
+    <BoardCard title="Google Drive" description="Folders syncing" icon="cloud" />
+  </BoardColumn>
+  <BoardColumn title="Pending" color="1" icon="loader">
+    <BoardCard title="ChatGPT" description="Awaiting API key" icon="key" dueDate="2024-12-15" />
+  </BoardColumn>
+  <BoardColumn title="Configure" color="0" icon="settings">
+    <BoardCard title="Export Presets" description="Set default platforms" icon="share-2" />
+  </BoardColumn>
+</Board>
+
+<Callout kind="alert">
+  Test exports with sample items before live posting.
+</Callout>

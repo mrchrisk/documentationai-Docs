@@ -1,0 +1,134 @@
+---
+title: Features
+description: Detailed walkthrough of BosOn's core features for organizing, searching, and managing AI-generated images and videos.
+---
+
+## Overview
+
+BosOn helps you organize AI-generated images and videos with powerful tools for storage, workflow management, and discovery. You can create boards, assign statuses, search visually or by tags, and use the Studio for editing. Follow the slogan: Make it. Keep it. Find it. Post it.
+
+<Callout kind="info">
+  All features are available in early access. Request access at [getboson.app](https://getboson.app/#access).
+</Callout>
+
+## Library and Boards Management
+
+The Library stores all your AI-generated content in one place. You create boards to group items by project, like "Aura launch" or "Spring drop".
+
+<Columns cols={2}>
+  <Card title="Create Boards" icon="layers" href="/guides/boards">
+    Group images and videos by campaign or theme for easy organization.
+  </Card>
+  <Card title="View Stats" icon="bar-chart-3" href="/guides/library">
+    Track total items, recent additions, and elements across boards.
+  </Card>
+  <Card title="Download Assets" icon="download" href="/integrations">
+    Export to Google Drive, ChatGPT, or other tools directly.
+  </Card>
+  <Card title="Performance Metrics" icon="trending-up" href="/analytics">
+    See conversions and revenue per item, like "41 conv, $212".
+  </Card>
+</Columns>
+
+Use boards to categorize:
+
+| Board Name     | Item Count | Status Summary      |
+|---------------|------------|---------------------|
+| Aura launch  | 24        | 10 Live, 5 Pending |
+| Spring drop  | 31        | 15 Approved        |
+| Mara campaign| 17        | 8 Paused           |
+
+## Status Assignment Workflow
+
+Assign statuses to track your content lifecycle: Pending, Approved, Live, Paused, Rejected, Retired.
+
+<Board title="Content Workflow">
+  <BoardColumn title="Pending" color="0" icon="clock">
+    <BoardCard title="aura-hero-v3" description="Waiting for review" createdAt="2024-10-01" />
+    <BoardCard title="nightdrive-v1" />
+  </BoardColumn>
+  <BoardColumn title="Approved" color="1" icon="check-circle">
+    <BoardCard title="espresso-pour" description="Ready for posting" dueDate="2024-10-15" />
+  </BoardColumn>
+  <BoardColumn title="Live" color="2" icon="globe">
+    <BoardCard title="perfume-ad" description="41 conv, $212" author="Studio North" />
+    <BoardCard title="sneaker-burst" description="63 conv, $301" />
+  </BoardColumn>
+  <BoardColumn title="Paused" color="3" icon="pause">
+    <BoardCard title="car-nightdrive" description="9 conv, $88" />
+  </BoardColumn>
+</Board>
+
+<Steps>
+  <Step title="Upload Content" icon="upload">
+    Add images or videos from AI tools to your Library.
+  </Step>
+  <Step title="Assign Status" icon="edit-3">
+    Update status as it moves through review.
+  </Step>
+  <Step title="Monitor Performance" icon="activity">
+    Track live items with conversion data.
+  </Step>
+</Steps>
+
+## Search by Content and Tags
+
+Find items instantly with visual search or tags. No more digging through folders.
+
+<Tabs>
+  <Tab title="Visual Search" icon="search">
+    Upload a reference image to find similar content.
+    
+    ```javascript
+    // Example API call for visual search
+    const results = await fetch('https://api.example.com/search/visual', {
+      method: 'POST',
+      body: formDataWithImage
+    });
+    ```
+  </Tab>
+  <Tab title="Tag Search" icon="tag">
+    Query by tags like "16:9", "portrait", or "campaign".
+    
+    ````javascript
+    // Search by tags
+    const items = await boson.search({
+      tags: ['live', 'meta'],
+      query: 'aura'
+    });
+    console.log(items); // Returns matching assets
+    ````
+  </Tab>
+  <Tab title="Advanced Filters" icon="filter">
+    Combine status, board, and date filters.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Visual search works best with high-contrast AI-generated images for accurate matches.
+</Callout>
+
+## Studio Tools Overview
+
+The Studio lets you edit, remix, and prepare content for posting.
+
+<Expandable title="Basic Editing" default-open="true">
+  Crop, resize to 16:9, add overlays, and generate variants.
+</Expandable>
+
+<Expandable title="Advanced Features">
+  Integrate with AI models for upscaling or style transfer.
+  
+  ```bash
+  boson studio upscale input.jpg --model gemini-pro
+  ```
+</Expandable>
+
+<Columns cols={2}>
+  <Card title="Next: Quickstart" icon="book-open" href="/quickstart" horizontal>
+    Set up your Library in minutes.
+  </Card>
+  <Card title="Integrations" icon="plug" href="/integrations" horizontal>
+    Connect to your AI workflow tools.
+  </Card>
+</Columns>
